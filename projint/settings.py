@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'painelInformacoes',
     'tickets',
     'usuario',
+    'ausencia',
+    'usuariot',
 ]
 
 MIDDLEWARE = [
