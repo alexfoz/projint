@@ -3,12 +3,19 @@ from django.db import models
 
 
 # Create your models here.
+from tickets.models import Tickets
+
+
 class Usuariot(object):
     pass
 
 
 class Usuariot(models.Model):
-    ticketId = models.ForeignKey(User, on_delete=models.CASCADE)
-    Usuariot.suarioSolicitanteTicketId = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    ticketId = models.ForeignKey(Tickets, on_delete=models.CASCADE)
+    Usuariot.solicitante = models.ForeignKey(Tickets, on_delete=models.CASCADE)
     dataUltimaAlteracao = models.DateField(max_length=10)
-    Usuariot.SolicitadoId = models.ForeignKey(User, on_delete=models.CASCADE)
+    Usuariot.solicitadoId = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.usu

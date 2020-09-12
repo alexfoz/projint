@@ -8,7 +8,7 @@ class Ausencia(models.Model):
     descricao = models.TextField()
     dataDeInicio = models.DateField(max_length=10)
     dataDeFim = models.DateField(max_length=10)
-    usuarioId = models.ForeignKey(User, on_delete=models.CASCADE)
+    funcionarioId = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.descricao
