@@ -46,6 +46,11 @@ INSTALLED_APPS = [
     'usuario',
     'ausencia',
     'usuariot',
+    'cargo',
+    'departamento',
+    'escala',
+    'horarios',
+
 ]
 
 MIDDLEWARE = [
