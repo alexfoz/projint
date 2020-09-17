@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'escala',
     'horarios',
     'periodo',
+    'ticketstatus',
 
 ]
 
