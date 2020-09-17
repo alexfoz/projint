@@ -10,5 +10,5 @@ class Horarios(models.Model):
     saida = models.TimeField()
     departamentoId = models.ForeignKey(Departamento, on_delete=models.CASCADE)
 
-    #def __str__(self):
-        #return Horarios
+    def __str__(self):
+        return self.departamentoId, self.horario

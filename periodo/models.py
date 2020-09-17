@@ -8,7 +8,7 @@ class Periodo(models.Model):
     escala = models.ForeignKey(Departamento, on_delete=models.CASCADE)
     Turno = models.TextField(max_length=20)
 
-    #def __str__(self):
-        #return Departamento
+    def __str__(self):
+        return self.Turno, self.data
 
 

@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from tickets.models import Tickets
 
 
 # Create your models here.
@@ -17,5 +18,5 @@ class Usuariot(models.Model):
     dataUltimaAlteracao = models.DateField(max_length=10)
     Usuariot.solicitadoId = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.ticketId
+    #def __str__(self):
+        #return self.user
