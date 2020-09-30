@@ -1,5 +1,8 @@
+from datetime import date
 from django.db import models
-
+from cargo.models import Cargo
+from departamento.models import Departamento
+#from feedBack.models import Feedback
 
 
 # Create your models here.
@@ -12,11 +15,10 @@ class Usuario(models.Model):
     telefone = models.CharField(max_length=14)
     dataDeNascimento = models.DateField(max_length=10)
     dataDeAdmissao = models.DateField(max_length=10)
-    dataDeTermino = models.DateField(max_length=10)
+    dataDeTermino: date = models.DateField(null=True)
     matricula = models.CharField(max_length=8)
-    isAtivo = models.CharField(max_length=12)
-    funcaoFuncionarioId = models.CharField(max_length=40)
-    departamentoId = models.CharField(max_length=40)
+    funcaoFuncionarioId = models.ForeignKey(Cargo, on_delete=models.CASCADE)
+    departamentoId = models.ForeignKey(Departamento, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nome
